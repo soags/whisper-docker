@@ -1,0 +1,8 @@
+version: '3'
+services:
+  whisper:
+    build: .    
+    volumes:
+      - ./audio:/app/audio
+      - ./text:/app/text
+    command: python transcribe.py
